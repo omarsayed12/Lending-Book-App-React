@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
-// import MainPage from './comp onents/MainPage'
+import MainPage from './components/MainPage'
 import Search from './components/Search'
 
 import * as BooksAPI from './BooksAPI'
@@ -30,14 +30,14 @@ class BooksApp extends React.Component {
         <div className='app'>
           <Switch>
             <Route path='/search'>
-              <Search />
+              <Search changeBookShelf={this.changeBookShelf} />
             </Route>
-            {/* <Route path='/'>
+            <Route path='/'>
               <MainPage
                 books={this.state.books}
                 changeBookShelf={this.changeBookShelf}
               />
-            </Route> */}
+            </Route>
           </Switch>
         </div>
       </Router>
