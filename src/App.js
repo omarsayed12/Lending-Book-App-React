@@ -30,7 +30,10 @@ class BooksApp extends React.Component {
         <div className='app'>
           <Switch>
             <Route path='/search'>
-              <Search changeBookShelf={this.changeBookShelf} />
+              <Search
+                changeBookShelf={this.changeBookShelf}
+                books={this.props.books}
+              />
             </Route>
             <Route path='/'>
               <MainPage
@@ -38,6 +41,7 @@ class BooksApp extends React.Component {
                 changeBookShelf={this.changeBookShelf}
               />
             </Route>
+            --
           </Switch>
         </div>
       </Router>
