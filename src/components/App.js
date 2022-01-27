@@ -1,11 +1,11 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
-import MainPage from './components/MainPage'
-import Search from './components/Search'
+import MainPage from './MainPage'
+import Search from './Search'
 
 import * as BooksAPI from './BooksAPI'
-import './App.css'
+import '../css/App.css'
 
 class BooksApp extends React.Component {
   state = {
@@ -41,7 +41,6 @@ class BooksApp extends React.Component {
                 changeBookShelf={this.changeBookShelf}
               />
             </Route>
-            --
           </Switch>
         </div>
       </Router>
