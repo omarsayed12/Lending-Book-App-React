@@ -6,7 +6,7 @@ import MainPage from './MainPage'
 
 import * as BooksAPI from './BooksAPI'
 import '../css/App.css'
-import Search from './Search'
+import Search1 from './Search1'
 
 class BooksApp extends React.Component {
   state = {
@@ -31,7 +31,7 @@ class BooksApp extends React.Component {
         <div className='app'>
           <Switch>
             <Route path='/search'>
-              <Search
+              <Search1
                 changeBookShelf={this.changeBookShelf}
                 books={this.props.books}
               />
