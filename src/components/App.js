@@ -1,9 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-
 import MainPage from './MainPage'
 import Search from './Search'
-
 import * as BooksAPI from './BooksAPI'
 import '../css/App.css'
 

@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom'
 import Book from './Book'
 
 const MainPage = props => {
-  console.log(props.books)
-
   return (
     <div className='list-books'>
       <div className='list-books-title'>

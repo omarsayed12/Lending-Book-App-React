@@ -2,15 +2,15 @@
 
 ## launch the app with
 
-\*Git clone ==> `https://github.com/omarsayed12/Lending-Book-App`
+* Git clone ==> `https://github.com/omarsayed12/Lending-Book-App`
 
-\*install all project dependencies with
+* install all project dependencies with
 `npm install`
 
-\*start the development server with
+* start the development server with
 `npm start`
 
-\*Local host if does not work when start: http://localhost:3000/
+* Local host if does not work when start: http://localhost:3000/
 
 ```bash
 ├── CONTRIBUTING.md
@@ -25,12 +25,10 @@
     ├── Components
     │   ├── MainPage.js # This Is root Contain Books.js and Search.js
     │   ├── Book.js # This page Contain all Books display
-    │   └── Search.js # This page Contain the Book Search
-
-
+    │   ├── Search.js # This page Contain the Book Search
+    │   ├── BooksAPI.js # A JavaScript API for the provided Udacity backend. Instructions for the methods are below.
     ├── App.js # This is the root of your app. Contains MainPage.js
     ├── App.test.js # Used for testing. Provided with Create React App. Testing is encouraged, but not required.
-    ├── BooksAPI.js # A JavaScript API for the provided Udacity backend. Instructions for the methods are below.
     ├── icons # Helpful images for your app. Use at your discretion.
     │   ├── add.svg
     │   ├── arrow-back.svg
