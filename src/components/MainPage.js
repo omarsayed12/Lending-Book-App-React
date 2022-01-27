@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Book from './Book'
-// import Book from './Book'
+import Book1 from './Book1'
 
 const MainPage = props => {
   console.log(props.books)
@@ -21,7 +20,7 @@ const MainPage = props => {
                   .filter(book => book.shelf === 'currentlyReading')
                   .map(book => (
                     <li key={book.id}>
-                      <Book
+                      <Book1
                         book={book}
                         changeBookShelf={props.changeBookShelf}
                         defaultShelf='currentlyReading'
@@ -39,7 +38,7 @@ const MainPage = props => {
                   .filter(book => book.shelf === 'wantToRead')
                   .map(book => (
                     <li key={book.id}>
-                      <Book
+                      <Book1
                         book={book}
                         changeBookShelf={props.changeBookShelf}
                         defaultShelf='wantToRead'
@@ -57,7 +56,7 @@ const MainPage = props => {
                   .filter(book => book.shelf === 'read')
                   .map(book => (
                     <li key={book.id}>
-                      <Book
+                      <Book1
                         book={book}
                         changeBookShelf={props.changeBookShelf}
                         defaultShelf='read'

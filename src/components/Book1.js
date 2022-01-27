@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Book = props => {
+const Book1 = props => {
   const displayImage = props.book.imageLinks
     ? props.book.imageLinks.thumbnail
     : ''
@@ -37,4 +37,4 @@ const Book = props => {
   )
 }
 
-export default Book
+export default Book1
