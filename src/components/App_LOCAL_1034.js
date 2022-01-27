@@ -1,14 +1,9 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import MainPage from './MainPage'
-<<<<<<< HEAD
 import Search from './Search'
-=======
-
->>>>>>> eb0ebba6ff6e33472c5d889bd54c9f9d252026e6
 import * as BooksAPI from './BooksAPI'
 import '../css/App.css'
-import Search from './Search'
 
 class BooksApp extends React.Component {
   state = {
