@@ -1,9 +1,10 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const Book = props => {
-  const displayImage = props.book.imageLinks
-    ? props.book.imageLinks.thumbnail
-    : ''
+  const { book } = props
+  const displayImage = book.imageLinks ? book.imageLinks.thumbnail : ''
+  const title = book.title ? book.title : 'Not found the book'
 
   return (
     <div className='book'>
@@ -18,7 +19,7 @@ const Book = props => {
         ></div>
         <div className='book-shelf-changer'>
           <select
-            onChange={e => props.changeBookShelf(props.book, e.target.value)}
+            onChange={e => props.changeBookShelf(book, e.target.value)}
             value={props.defaultShelf}
           >
             <option value='move' disabled>
@@ -31,10 +32,14 @@ const Book = props => {
           </select>
         </div>
       </div>
-      <div className='book-title'>{props.book.title}</div>
-      <div className='book-authors'>{props.book.authors}</div>
+      <div className='book-title'>{title}</div>
+      <div className='book-authors'>{book.authors}</div>
     </div>
   )
+}
+
+Book.prototype = {
+  book: PropTypes.object.isRequired
 }
 
 export default Book
