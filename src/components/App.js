@@ -12,12 +12,13 @@ class BooksApp extends React.Component {
   }
 
   componentDidMount () {
-    BooksAPI.getAll().then(books => this.setState({ books }))
+    BooksAPI.getAll().then(books => this.setState({ books: books }))
   }
 
   changeBookShelf = (book, Bookshelf) => {
-    BooksAPI.update(book, Bookshelf)
-    BooksAPI.getAll().then(books => this.setState({ books }))
+    BooksAPI.update(book, Bookshelf).then(book => {
+      BooksAPI.getAll().then(books => this.setState({ books: books }))
+    })
   }
 
   render () {
@@ -29,8 +30,8 @@ class BooksApp extends React.Component {
           <Switch>
             <Route path='/search'>
               <Search
+                books={this.state.books}
                 changeBookShelf={this.changeBookShelf}
-                books={this.props.books}
               />
             </Route>
             <Route path='/'>

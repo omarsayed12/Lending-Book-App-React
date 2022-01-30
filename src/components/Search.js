@@ -10,6 +10,7 @@ class Search extends Component {
     searchNewBooks: [],
     bookSearchError: false
   }
+
   // function to update search Query
   updateSearchQuery = query => {
     this.setState({
@@ -56,13 +57,16 @@ class Search extends Component {
         <div className='search-books-results'>
           <ol className='books-grid'>
             {this.state.searchNewBooks.map(searchedBook => {
-              const selectShelf = 'none'
+              let shelf = 'none'
+              this.props.books.map(book =>
+                book.id === searchedBook.id ? (shelf = book.shelf) : ''
+              )
               return (
                 <li key={searchedBook.id}>
                   <Book
                     book={searchedBook}
                     changeBookShelf={this.props.changeBookShelf}
-                    defaultShelf={selectShelf}
+                    defaultShelf={shelf}
                   />
                 </li>
               )
