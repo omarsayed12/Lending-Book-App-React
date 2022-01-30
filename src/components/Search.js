@@ -23,7 +23,7 @@ class Search extends Component {
 
   updateSearchBook = query => {
     if (query) {
-      BooksAPI.search(query.trim()).then(searchBooks => {
+      BooksAPI.search(query.trim(), 30).then(searchBooks => {
         searchBooks.length > 0
           ? this.setState({
               searchNewBooks: searchBooks,
